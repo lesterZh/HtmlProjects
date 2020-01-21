@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0,maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="format-detection" content="telephone=no">
+
+    <title>测测你的健康成分</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" type="text/javascript" defer></script>
+
+</head>
+<body>
+
+    <div class="container" id="container">
+        
+    <div class="page" id="page_music">
+        <div class="music_rotate music_play" id="music_rotate"></div>
+    </div>
+
+
+    <div class="page" id="start">
+        <div class="bg"></div>
+        <div class="start_words" id="start_words"></div>
+        <div class="start_pander" id="start_pander"></div>
+        <div class="start_test" id="start_test"></div>
+    </div>
+
+    <div class="page" id="p1">
+        <div class="bg" id="p1_bg"></div>
+        <div class="ans1" id="p1_a1"></div>
+        <div class="ans2" id="p1_a2"></div>
+        <div class="ans3" id="p1_a3"></div>
+        <div class="ans4" id="p1_a4"></div>
+        <div class="ret" id="p1_ret"></div>
+        <div class="next" id="p1_next"></div>
+    </div>
+    
+    <div class="page" id="p2">
+        <div class="bg" id="p2_bg"></div>
+        <div class="ans1" id="p2_a1"></div>
+        <div class="ans2" id="p2_a2"></div>
+        <div class="ans3" id="p2_a3"></div>
+        <div class="ret" id="p2_ret"></div>
+        <div class="next" id="p2_next"></div>
+    </div>
+
+    <div class="page" id="p3">
+        <div class="bg" id="p3_bg"></div>
+        <div class="ans1" id="p3_a1"></div>
+        <div class="ans2" id="p3_a2"></div>
+        <div class="ans3" id="p3_a3"></div>
+        <div class="ans4" id="p3_a4"></div>
+        <div class="ret" id="p3_ret"></div>
+        <div class="next" id="p3_next"></div>
+    </div>
+
+    <div class="page" id="p4">
+        <div class="bg" id="p4_bg"></div>
+        <div class="ans1" id="p4_a1"></div>
+        <div class="ans2" id="p4_a2"></div>
+        <div class="ans3" id="p4_a3"></div>
+        <div class="ret" id="p4_ret"></div>
+        <div class="next" id="p4_next"></div>
+    </div>
+
+    <div class="page" id="p5">
+        <div class="bg" id="p5_bg"></div>
+        <div class="ans1" id="p5_a1"></div>
+        <div class="ans2" id="p5_a2"></div>
+        <div class="ans3" id="p5_a3"></div>
+        <div class="ans4" id="p5_a4"></div>
+        <div class="ret" id="p5_ret"></div>
+        <div class="next" id="p5_next"></div>
+    </div>
+
+    <div class="page" id="end">
+        <div class="bg" id="end_bg"></div>
+        <div class="restart" id="restart"></div>
+    </div>
+
+    </div>
+
+    <div class="help">
+        <img src="./images/p1_answer.png" alt="">
+        <img src="./images/p2_answer.png" alt="">
+        <img src="./images/p3_answer.png" alt="">
+        <img src="./images/p4_answer.png" alt="">
+        <img src="./images/p5_answer.png" alt="">
+
+        <img src="./images/bg1.jpg" alt="">
+        <img src="./images/bg2.jpg" alt="">
+
+        <img src="./images/p1_bg.png" alt="">
+        <img src="./images/p2_bg.png" alt="">
+        <img src="./images/p3_bg.png" alt="">
+        <img src="./images/p4_bg.png" alt="">
+        <img src="./images/p5_bg.png" alt="">
+
+        <img src="./images/start_test_hover.png" alt="">
+        <img src="./images/next_hover.png" alt="">
+        <img src="./images/restart_hover.png" alt="">
+        <img src="./images/end_next_hover.png" alt="">
+
+        <img src="./images/end_next.png" alt="">
+        <img src="./images/start_test_normal.png" alt="">
+        <img src="./images/next_normal.png" alt="">
+        <img src="./images/restart_normal.png" alt="">
+
+        <img src="./images/start_words.png" alt="">
+        <img src="./images/start_pander.png" alt="">
+
+        <img src="./images/p1_jump.png" alt="">
+        <img src="./images/p2_jump.png" alt="">
+        <img src="./images/p3_jump.png" alt="">
+        <img src="./images/p4_jump.png" alt="">
+        <img src="./images/p5_jump.png" alt="">
+
+        <img src="./images/right1.png" alt="">
+        <img src="./images/right2.png" alt="">
+        <img src="./images/right34.png" alt="">
+        <img src="./images/right5.png" alt="">
+    </div>
+
+    <audio id="bg_music" autoplay="true" loop="true">
+        <source src="audio/bg2.mp3" type="audio/mpeg">
+    </audio>
+
+    <audio src="audio/right.mp3" type="audio/mpeg" id="right"></audio>
+	<audio src="audio/wrong.mp3" type="audio/mpeg" id="wrong"></audio>
+</body>
+
+</html>

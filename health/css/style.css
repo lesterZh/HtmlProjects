@@ -1,0 +1,723 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    font-size: 1.5625vw;
+    font-family: "Microsoft Yahei";
+}
+
+body {
+    position: absolute;
+    background: url("../images/bg1.jpg") repeat center center;
+    background-size: 100%;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.help {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -10;
+    visibility: hidden;
+}
+
+.container {
+    position: absolute;
+    width: 100vw;
+    height: 177.866vw;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.page {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.page > .bg {
+    position: absolute;
+    z-index: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.page > .bg2 {
+    position: absolute;
+    z-index: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.page > .music_rotate {
+    position: absolute;
+    height: 20vw;
+    width: 20vw;
+    z-index: 6;
+    background: url("../images/music.png");
+    background-size: 100%;
+    right: 2%;
+    bottom: 88%;
+}
+
+.music_play {
+    animation: music_disc 4s linear infinite;
+    -webkit-animation: music_disc 4s linear infinite;
+}
+
+@keyframes music_disc {
+    0% {
+        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+
+/* start */
+#start {
+    display: block;
+    transition: 1s;
+    -webkit-transition: 1s;
+}
+
+#start.out {
+    opacity: .3;
+    transform: translate(-100%, 0);
+    -webkit-transform: translate(-100%, 0);
+}
+
+#start > .bg {
+    background: url("../images/start_bg_empty.png") no-repeat center center;
+    background-size: 100%;
+}
+
+#start > .start_words {
+    background: url("../images/start_words.png") no-repeat center center;
+    background-size: 100%;
+    position: absolute;
+    z-index: 0;
+    height: 100%;
+    width: 0%;
+    transition: 1s;
+    -webkit-transition: 1s;
+}
+
+
+#start > .start_pander {
+    background: url("../images/start_pander.png") no-repeat center center;
+    background-size: 100%;
+    position: absolute;
+    z-index: 0;
+    height: 100%;
+    width: 0%;
+    left: 100%; 
+    transition: 1s;
+    -webkit-transition: 1s;
+}
+
+
+#start > .start_test {
+    position: absolute;
+    background: url("../images/start_test_normal.png") no-repeat center center;
+    background-size: 100%;
+    z-index: 3;
+    width: 52%;
+    height: 10%;
+    bottom: 5.9%;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+#start > .start_test:active {
+    position: absolute;
+    background: url("../images/start_test_hover.png") no-repeat center center;
+    background-size: 100%;
+    z-index: 3;
+    width: 52%;
+    height: 10%;
+    bottom: 5.9%;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+
+/* problem 1 */
+#p1 {
+    display: none;
+    /* left: 100%; */
+    opacity: 0.0;
+    transition: 1s;
+    -webkit-transition: 1s;
+}
+
+
+#p1 > .bg {
+    background: url("../images/p1_bg.png") no-repeat center center;
+    background-size: 100%;
+}
+
+
+#p1 > .ans1 {
+    position: absolute;
+    background: #d60b3b;
+    opacity: 0;
+    content: "";
+    width: 38%;
+    height: 11%;
+    left: 10%;
+    bottom: 22%;
+}
+
+#p1 > .ans2 {
+    position: absolute;
+    background: #d60b3b;
+    opacity: 0;
+    content: "";
+    width: 38%;
+    height: 11%;
+    right: 10%;
+    bottom: 22%;
+}
+
+#p1 > .ans3 {
+    position: absolute;
+    background: #d60b3b;
+    opacity: 0;
+    content: "";
+    width: 38%;
+    height: 11%;
+    left: 10%;
+    bottom: 7%;
+}
+
+
+#p1 > .ans4 {
+    position: absolute;
+    background: #d60b3b;
+    opacity: 0;
+    content: "";
+    width: 38%;
+    height: 11%;
+    right: 10%;
+    bottom: 7%;
+}
+
+#p1 > .ret {
+    position: absolute;
+    background: url("../images/p1_jump.png") no-repeat center center;
+    background-size: 100%;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: -2;
+    opacity: 0;
+}
+
+#p1 > .next {
+    position: absolute;
+    background: url("../images/next_normal.png") no-repeat center center;
+    background-size: 100%;
+    width: 40%;
+    height: 10%;
+    left: 0;
+    right: 0;
+    bottom: 4%;
+    margin: auto;
+    z-index: -2;
+    opacity: 0;
+
+}
+
+#p1 > .next:active {
+    position: absolute;
+    background: url("../images/next_hover.png") no-repeat center center;
+    background-size: 100%;
+    width: 40%;
+    height: 10%;
+    left: 0;
+    right: 0;
+    bottom: 4%;
+    margin: auto;
+    z-index: 4;
+}
+
+
+/* 抽取出公共设置 */
+.page > .next {
+    position: absolute;
+    background: url("../images/next_normal.png") no-repeat center center;
+    background-size: 100%;
+    width: 40%;
+    height: 10%;
+    left: 0;
+    right: 0;
+    bottom: 4%;
+    margin: auto;
+    z-index: -2;
+    opacity: 0;
+
+}
+
+.page > .next:active {
+    position: absolute;
+    background: url("../images/next_hover.png") no-repeat center center;
+    background-size: 100%;
+    width: 40%;
+    height: 10%;
+    left: 0;
+    right: 0;
+    bottom: 4%;
+    margin: auto;
+    z-index: 4;
+}
+
+
+/* problem 2 */
+#p2 {
+    display: none;
+    /* left: 100%; */
+    opacity: 0.0;
+    transition: 1s;
+    -webkit-transition: 1s;
+}
+
+#p2 > .bg {
+    background: url("../images/p2_bg.png") no-repeat center center;
+    background-size: 100%;
+}
+
+#p2 > .ans1 {
+    position: absolute;
+    background: #d60b3b;
+    opacity: 0.3;
+    content: "";
+    width: 38%;
+    height: 11%;
+    left: 10%;
+    bottom: 22%;
+}
+
+#p2 > .ans3 {
+    position: absolute;
+    background: #d60b3b;
+    opacity: 0.3;
+    content: "";
+    width: 38%;
+    height: 26%;
+    right: 10%;
+    bottom: 7%;
+}
+
+#p2 > .ans2 {
+    position: absolute;
+    background: #d60b3b;
+    opacity: 0.3;
+    content: "";
+    width: 38%;
+    height: 11%;
+    left: 10%;
+    bottom: 7%;
+}
+
+#p2 > .ret {
+    position: absolute;
+    background: url("../images/p2_jump.png") no-repeat center center;
+    background-size: 100%;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: -2;
+    opacity: 0;
+
+}
+
+/* problem 3 */
+#p3 {
+    display: none;
+    /* left: 100%; */
+    opacity: 0.0;
+    transition: 1s;
+    -webkit-transition: 1s;
+}
+
+#p3 > .bg {
+    background: url("../images/p3_bg.png") no-repeat center center;
+    background-size: 100%;
+}
+
+
+#p3 > .ans1 {
+    position: absolute;
+    background: #d60b3b;
+    opacity: 0.3;
+    content: "";
+    width: 38%;
+    height: 11%;
+    left: 10%;
+    bottom: 22%;
+}
+
+#p3 > .ans2 {
+    position: absolute;
+    background: #d60b3b;
+    opacity: 0.3;
+    content: "";
+    width: 38%;
+    height: 11%;
+    right: 10%;
+    bottom: 22%;
+}
+
+#p3 > .ans3 {
+    position: absolute;
+    background: #d60b3b;
+    opacity: 0.3;
+    content: "";
+    width: 38%;
+    height: 11%;
+    left: 10%;
+    bottom: 7%;
+}
+
+
+#p3 > .ans4 {
+    position: absolute;
+    background: #d60b3b;
+    opacity: 0.3;
+    content: "";
+    width: 38%;
+    height: 11%;
+    right: 10%;
+    bottom: 7%;
+}
+
+#p3 > .ret {
+    position: absolute;
+    background: url("../images/p3_jump.png") no-repeat center center;
+    background-size: 100%;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: -2;
+    opacity: 0;
+
+}
+
+
+/* problem 4 */
+#p4 {
+    display: none;
+    /* left: 100%; */
+    opacity: 0.0;
+    transition: 1s;
+    -webkit-transition: 1s;
+}
+
+#p4 > .bg {
+    background: url("../images/p4_bg.png") no-repeat center center;
+    background-size: 100%;
+}
+
+#p4 > .ans1 {
+    position: absolute;
+    background: #d60b3b;
+    opacity: 0.3;
+    content: "";
+    width: 38%;
+    height: 11%;
+    left: 10%;
+    bottom: 22%;
+}
+
+#p4 > .ans3 {
+    position: absolute;
+    background: #d60b3b;
+    opacity: 0.3;
+    content: "";
+    width: 38%;
+    height: 26%;
+    right: 10%;
+    bottom: 7%;
+}
+
+#p4 > .ans2 {
+    position: absolute;
+    background: #d60b3b;
+    opacity: 0.3;
+    content: "";
+    width: 38%;
+    height: 11%;
+    left: 10%;
+    bottom: 7%;
+}
+
+#p4 > .ret {
+    position: absolute;
+    background: url("../images/p4_jump.png") no-repeat center center;
+    background-size: 100%;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: -2;
+    opacity: 0;
+
+}
+
+
+/* problem 5 */
+#p5 {
+    display: none;
+    /* left: 100%; */
+    opacity: 0;
+    transition: 1s;
+    -webkit-transition: 1s;
+}
+
+#p5 > .bg {
+    background: url("../images/p5_bg.png") no-repeat center center;
+    background-size: 100%;
+}
+
+
+#p5 > .ans1 {
+    position: absolute;
+    background: #d60b3b;
+    opacity: 0.3;
+    content: "";
+    width: 38%;
+    height: 11%;
+    left: 10%;
+    bottom: 22%;
+}
+
+#p5 > .ans2 {
+    position: absolute;
+    background: #d60b3b;
+    opacity: 0.3;
+    content: "";
+    width: 38%;
+    height: 11%;
+    right: 10%;
+    bottom: 22%;
+}
+
+#p5 > .ans3 {
+    position: absolute;
+    background: #d60b3b;
+    opacity: 0.3;
+    content: "";
+    width: 38%;
+    height: 11%;
+    left: 10%;
+    bottom: 7%;
+}
+
+
+#p5 > .ans4 {
+    position: absolute;
+    background: #d60b3b;
+    opacity: 0.3;
+    content: "";
+    width: 38%;
+    height: 11%;
+    right: 10%;
+    bottom: 7%;
+}
+
+#p5 > .ret {
+    position: absolute;
+    background: url("../images/p5_jump.png") no-repeat center center;
+    background-size: 100%;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: -2;
+    opacity: 0;
+
+}
+
+
+#p5 > .next {
+    position: absolute;
+    background: url("../images/end_next.png") no-repeat center center;
+    background-size: 100%;
+    width: 57%;
+    height: 12%;
+    left: 0;
+    right: 0;
+    bottom: 3%;
+    margin: auto;
+    z-index: -2;
+    opacity: 0;
+
+}
+
+#p5 > .next:active {
+    position: absolute;
+    background: url("../images/end_next_hover.png") no-repeat center center;
+    background-size: 100%;
+    width: 57%;
+    height: 12%;
+    left: 0;
+    right: 0;
+    bottom: 3%;
+    margin: auto;
+    z-index: -2;
+}
+
+/* 最后结果页面 */
+#end {
+    display: none;
+    /* left: 100%; */
+    opacity: 0.0;
+    transition: 1s;
+    -webkit-transition: 1s;
+}
+
+#end > .bg {
+    background: url("../images/right1.png") no-repeat center center;
+    background-size: 100%;
+}
+
+#end > .restart {
+    position: absolute;
+    background: url("../images/restart_normal.png") no-repeat center center;
+    background-size: 100%;
+    width: 40%;
+    height: 10%;
+    left: 0;
+    right: 0;
+    bottom: 5%;
+    margin: auto;
+    z-index: 2;
+}
+
+#end > .restart:active {
+    position: absolute;
+    background: url("../images/restart_hover.png") no-repeat center center;
+    background-size: 100%;
+    width: 40%;
+    height: 10%;
+    left: 0;
+    right: 0;
+    bottom: 5%;
+    margin: auto;
+    z-index: 2;
+}
+
+/* 公共资源 */
+.page_in {
+    opacity: 1;
+    transform: translate(-100%, 0) ;
+    -webkit-transform: translate(-100%, 0);
+}
+
+.page_out {
+    opacity: .3;
+    transform: translate(-100%, 0);
+    -webkit-transform: translate(-100%, 0);
+}
+
+.page_out_left {
+    opacity: .3;
+    transform: translate(-200%, 0);
+    -webkit-transform: translate(-200%, 0);
+}
+
+.out_ani {
+    animation: go_out_animation 0.7s linear forwards;
+    -webkit-animation: go_out_animation 0.7s linear forwards;
+}
+
+@keyframes go_out_animation {
+    0% {
+        opacity: 1;
+        transform: scale(1) translate(0, 0);
+        -webkit-transform: scale(1) translate(0, 0);
+    }
+
+    100% {
+        opacity: 0.3;
+        transform: scale(0) translate(-100%, 0);
+        -webkit-transform: scale(0) translate(-100%, 0);
+    }
+}
+
+@-webkit-keyframes go_out_animation {
+    0% {
+        opacity: 1;
+        transform: scale(1) translate(0, 0);
+        -webkit-transform: scale(1) translate(0, 0);
+    }
+
+    100% {
+        opacity: 0.3;
+        transform: scale(0) translate(-100%, 0);
+        -webkit-transform: scale(0) translate(-100%, 0);
+    }
+}
+
+.in_ani {
+    animation: come_in_animation 0.7s linear forwards;
+    -webkit-animation: come_in_animation 0.7s linear forwards;
+}
+
+@keyframes come_in_animation {
+    0% {
+        opacity: 0.3;
+        transform: scale(0) translate(100%, 0);
+        -webkit-transform: scale(0) translate(100%, 0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1) translate(0, 0);
+        -webkit-transform: scale(1) translate(0, 0);
+    }
+}
+
+@-webkit-keyframes come_in_animation {
+    0% {
+        opacity: 0.3;
+        transform: scale(0) translate(100%, 0);
+        -webkit-transform: scale(0) translate(100%, 0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1) translate(0, 0);
+        -webkit-transform: scale(1) translate(0, 0);
+    }
+}
